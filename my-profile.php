@@ -35,7 +35,7 @@ echo '<script>alert("Your profile has been updated")</script>';
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Online Library Management System | Student Signup</title>
+    <title>Online Library Management System | Student Sign Up</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -54,7 +54,7 @@ echo '<script>alert("Your profile has been updated")</script>';
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">My Profile</h4>
+                <h4 class="header-line">Profile</h4>
                 
                             </div>
 
@@ -87,12 +87,12 @@ foreach($results as $result)
 </div>
 
 <div class="form-group">
-<label>Reg Date : </label>
+<label>Register Date : </label>
 <?php echo htmlentities($result->RegDate);?>
 </div>
 <?php if($result->UpdationDate!=""){?>
 <div class="form-group">
-<label>Last Updation Date : </label>
+<label>Last Update : </label>
 <?php echo htmlentities($result->UpdationDate);?>
 </div>
 <?php } ?>
@@ -109,23 +109,23 @@ foreach($results as $result)
 
 
 <div class="form-group">
-<label>Enter Full Name</label>
+<label>Full Name</label>
 <input class="form-control" type="text" name="fullanme" value="<?php echo htmlentities($result->FullName);?>" autocomplete="off" required />
 </div>
 
 
 <div class="form-group">
-<label>Mobile Number :</label>
+<label>Mobile Number</label>
 <input class="form-control" type="text" name="mobileno" maxlength="10" value="<?php echo htmlentities($result->MobileNumber);?>" autocomplete="off" required />
 </div>
                                         
 <div class="form-group">
-<label>Enter Email</label>
+<label>Email</label>
 <input class="form-control" type="email" name="email" id="emailid" value="<?php echo htmlentities($result->EmailId);?>"  autocomplete="off" required readonly />
 </div>
 <?php }} ?>
                               
-<button type="submit" name="update" class="btn btn-primary" id="submit">Update Now </button>
+<button type="submit" name="update" class="btn btn-primary" id="submit">Update Profile</button>
 
                                     </form>
                             </div>
