@@ -50,7 +50,7 @@ if (isset($_POST['signup'])) {
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Online Library Management System | Student Signup</title>
+    <title>Online Library Management System | Student Sign Up</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -95,7 +95,7 @@ if (isset($_POST['signup'])) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">User Signup</h4>
+                    <h4 class="header-line">User Sign Up</h4>
 
                 </div>
 
@@ -105,7 +105,7 @@ if (isset($_POST['signup'])) {
                 <div class="col-md-9 col-md-offset-1">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-                            SINGUP FORM
+                            SIGN UP FORM
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
@@ -116,7 +116,7 @@ if (isset($_POST['signup'])) {
 
 
                                 <div class="form-group">
-                                    <label>Mobile Number :</label>
+                                    <label>Enter Mobile Number</label>
                                     <input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
                                 </div>
 
@@ -136,10 +136,10 @@ if (isset($_POST['signup'])) {
                                     <input class="form-control" type="password" name="confirmpassword" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Verification code : </label>
+                                    <label>Verification Code</label>
                                     <input type="text" name="vercode" maxlength="5" autocomplete="off" style="width: 150px; height: 25px;" />&nbsp;<img src="captcha.php">
                                 </div>
-                                <button type="submit" name="signup" class="btn btn-danger" id="submit">Register Now </button>
+                                <button type="submit" name="signup" class="btn btn-danger" id="submit">SIGN UP </button>
 
                             </form>
                         </div>
