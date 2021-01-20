@@ -99,20 +99,20 @@ if (isset($_POST['signup'])) {
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
                                 <div class="form-group">
-                                    <label>Enter Full Name</label>
+                                    <label>Full Name</label>
                                     <input class="form-control" type="text" name="fullanme" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Mobile Number :</label>
+                                    <label>Mobile Number </label>
                                     <input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Enter Email</label>
+                                    <label>Email</label>
                                     <input class="form-control" type="email" name="email" id="emailid" onBlur="checkAvailability()" autocomplete="off" required />
                                     <span id="user-availability-status" style="font-size:12px;"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label>Enter Password</label>
+                                    <label>Password</label>
                                     <input class="form-control" type="password" name="password" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
@@ -135,5 +135,4 @@ if (isset($_POST['signup'])) {
     <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
 </body>
-
 </html>
