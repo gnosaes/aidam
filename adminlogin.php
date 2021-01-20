@@ -6,24 +6,20 @@ if ($_SESSION['alogin'] != '') {
     $_SESSION['alogin'] = '';
 }
 if (isset($_POST['login'])) {
-    //code for captach verification
-    if (false) {
-        echo "<script>alert('Incorrect verification code');</script>";
+
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+    $sql = "SELECT UserName,Password FROM admin WHERE UserName=:username and Password=:password";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':username', $username, PDO::PARAM_STR);
+    $query->bindParam(':password', $password, PDO::PARAM_STR);
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_OBJ);
+    if ($query->rowCount() > 0) {
+        $_SESSION['alogin'] = $_POST['username'];
+        echo "<script type='text/javascript'> document.location ='admin/dashboard.php'; </script>";
     } else {
-        $username = $_POST['username'];
-        $password = md5($_POST['password']);
-        $sql = "SELECT UserName,Password FROM admin WHERE UserName=:username and Password=:password";
-        $query = $dbh->prepare($sql);
-        $query->bindParam(':username', $username, PDO::PARAM_STR);
-        $query->bindParam(':password', $password, PDO::PARAM_STR);
-        $query->execute();
-        $results = $query->fetchAll(PDO::FETCH_OBJ);
-        if ($query->rowCount() > 0) {
-            $_SESSION['alogin'] = $_POST['username'];
-            echo "<script type='text/javascript'> document.location ='admin/dashboard.php'; </script>";
-        } else {
-            echo "<script>alert('Invalid Details');</script>";
-        }
+        echo "<script>alert('Invalid Details');</script>";
     }
 }
 ?>
@@ -76,10 +72,6 @@ if (isset($_POST['login'])) {
                                 <div class="form-group">
                                     <label>Password</label>
                                     <input class="form-control" type="password" name="password" autocomplete="off" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Verification code : </label>
-                                    <input type="text" name="vercode" maxlength="5" autocomplete="off" style="width: 150px; height: 25px;" />&nbsp;<img src="captcha.php">
                                 </div>
 
                                 <button type="submit" name="login" class="btn btn-info">LOGIN </button>
