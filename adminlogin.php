@@ -55,7 +55,7 @@ if (isset($_POST['login'])) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">ADMIN LOGIN FORM</h4>
+                    <h4 class="header-line">ADMIN LOGIN</h4>
                 </div>
             </div>
 
@@ -74,11 +74,11 @@ if (isset($_POST['login'])) {
                                     <input class="form-control" type="text" name="username" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
+                                    <label>Enter Password</label>
                                     <input class="form-control" type="password" name="password" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Verification code : </label>
+                                    <label>Verification Code </label>
                                     <input type="text" name="vercode" maxlength="5" autocomplete="off" style="width: 150px; height: 25px;" />&nbsp;<img src="captcha.php">
                                 </div>
 

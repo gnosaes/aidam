@@ -77,37 +77,37 @@ if (isset($_POST['change'])) {
         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
           <div class="panel panel-info">
             <div class="panel-heading">
-              LOGIN FORM
+              PASSWORD RECOVERY FORM
             </div>
             <div class="panel-body">
               <form role="form" name="chngpwd" method="post" onSubmit="return valid();">
 
                 <div class="form-group">
-                  <label>Enter Reg Email id</label>
+                  <label>Enter Your Email</label>
                   <input class="form-control" type="email" name="email" required autocomplete="off" />
                 </div>
 
                 <div class="form-group">
-                  <label>Enter Reg Mobile No</label>
+                  <label>Enter Your Mobile Number</label>
                   <input class="form-control" type="text" name="mobile" required autocomplete="off" />
                 </div>
 
                 <div class="form-group">
-                  <label>Password</label>
+                  <label>Enter New Password</label>
                   <input class="form-control" type="password" name="newpassword" required autocomplete="off" />
                 </div>
 
                 <div class="form-group">
-                  <label>ConfirmPassword</label>
+                  <label>Confirm New Password</label>
                   <input class="form-control" type="password" name="confirmpassword" required autocomplete="off" />
                 </div>
 
                 <div class="form-group">
-                  <label>Verification code : </label>
+                  <label>Verification Code</label>
                   <input type="text" class="form-control1" name="vercode" maxlength="5" autocomplete="off" style="height:25px;" />&nbsp;<img src="captcha.php">
                 </div>
 
-                <button type="submit" name="change" class="btn btn-info">Chnage Password</button> | <a href="index.php">Login</a>
+                <button type="submit" name="change" class="btn btn-info">Submit</button> | <a href="index.php">Back to User Login.</a>
               </form>
             </div>
           </div>

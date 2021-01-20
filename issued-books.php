@@ -49,7 +49,7 @@ header('location:manage-books.php');
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">Manage Issued Books</h4>
+                <h4 class="header-line">Issued Books</h4>
     </div>
     
 
@@ -66,11 +66,11 @@ header('location:manage-books.php');
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Book Name</th>
+                                            <th>Book Title</th>
                                             <th>ISBN </th>
                                             <th>Issued Date</th>
                                             <th>Return Date</th>
-                                            <th>Fine in(USD)</th>
+                                            <th>Fine (RM)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
